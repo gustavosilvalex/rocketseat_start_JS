@@ -1,0 +1,145 @@
+<html>   
+    <head>
+        <title>Curso Javascript</title>
+    </head>    
+    <body>
+        <script>
+            console.log('Hello Word');
+/*variáveis-----------*/
+            var nome = "Gustavo";
+            var idade = 34;
+            var peso = 85.5;
+            var humano = true;
+/*Array*/ /*Vetor começa do zero*/           
+            var alunos = ['Gustavo','Diego','Anderson','Lucas'];
+/*Objetos*/
+            var aluno ={
+                nome : 'Gustavo',
+                idade : 34,
+                pedo: 85.5,
+                humano: true
+            };
+            console.log(alunos[0]);
+            console.log(aluno.idade);
+/*operacoes matematicas*/
+            var x = 7, y = 5,z = "30";
+            console.log(x ,y);
+
+            var restodiv = x%y; 
+            var som = x+y;
+
+            
+            console.log(restodiv);
+            console.log(som);
+
+            x = x +3;
+            x -= 3;/*igual o de cima*/
+
+            console.log(x);
+/*------------------funcoes-----------------*/
+            
+            function soma( num1, num2) 
+            {
+                var resultado = num1 + num2;
+                return resultado;
+            }
+
+            var resultado = soma( 1, 2);
+            console.log(resultado);
+/*------condicionais--------*/
+            function retornaSexo(sexo){
+                if (sexo==='M'){        /*se colocar 3 iguais ele verifica o tipo da variavel tb*/
+                    return 'Masculino';
+                }   
+                else if (sexo==='F') {
+                    return  'Feminino';
+                }
+                else{
+                    return 'outro';
+                }
+            }
+            var resultad = retornaSexo('F');
+            console.log(resultad);
+/*switch*/
+            function retornaNome(nome){
+                 switch (nome){
+                        case 'G':return 'Gustavo';
+                        case 'D':return 'Diego';
+                        case 'A':return 'Anderson';
+                        default:return 'Outro';
+                    }
+                }
+                var result = retornaNome('');
+                console.log(result);
+/*---------------Operadores Logicos----------------------------*/
+                var sexo = 'F', idade =34;
+
+                if ((sexo==='M')&(idade===34)){
+                    console.log(sexo,idade);
+                }
+                if ((sexo==='M')||(idade===34)){
+                    console.log('so uma');
+                }
+                if (sexo!=='F'){
+                    console.log('M');
+                }
+
+                var dog = 'Marrom';
+                if (dog === 'Preto'){
+                    dog = true;
+                } else {
+                    dog = false;
+                }
+                console.log(dog);
+/*---------codicao ternaria*/
+                var cor = 'V';
+
+                var ret = (cor === 'V') ? 'Verde ou Vermelho' : 'Outra Cor';
+                console.log(ret);
+/*estruturas de repeticao -------------------------------*/
+
+                for (var i =30; i <=35; i++){/*utilizar o for quando souber o tamanho do intervalo*/
+                    console.log(i);
+                }
+
+
+
+                var j =20;
+                console.log(j);
+                while (j>10){   /*utilizar o while quando nao sei o tamanho*/
+                    j=j-1;
+                console.log(j);
+                }
+/*---------intervalo-------------------*/
+                function exibeAlgo() {
+                    console.log('Helo Word');
+                }
+                setInterval(exibeAlgo,1000);/*1000 a cada 1 segundo*/
+                
+                function exibeAlgoTb() {
+                    console.log('Tchau Word');
+                }
+                
+                setTimeout(exibeAlgoTb,5000);
+/*----------exercicio---------*/
+                var endereco = {
+                    rua : "Rua dos Pinheiros",
+                    numero : 1293,
+                    bairro : "Centro",
+                    cidade : "São Paulo",
+                    uf : "SP"
+                };
+                function localizacao(){
+                    console.log(endereco)
+                };
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
